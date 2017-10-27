@@ -1,0 +1,50 @@
+{
+  "name": "$component-name$",
+  "version": "0.0.1",
+  "description": "component for vue-component",
+  "main": "cjs/index.js",
+  "module": "es/index.js",
+  "scripts": {
+    "start": "vc-tool start",
+    "build": "vc-tool run build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint -c ./.eslintrc --fix --ext .vue ./src/",
+    "lint:style": "stylelint \"./assets/**/*.less\" --syntax less"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vueComponent/$component-name$.git"
+  },
+  "keywords": [
+    "vue",
+    "component",
+    "$component-name$"
+  ],
+  "author": "$user-name$",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/vueComponent/$component-name$/issues"
+  },
+  "homepage": "https://github.com/vueComponent/$component-name$#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
+    "babel-plugin-transform-es2015-parameters": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.7.2",
+    "eslint-plugin-html": "^3.2.2",
+    "eslint-plugin-vue-libs": "^1.2.1",
+    "pre-commit": "^1.2.2",
+    "stylelint": "^8.1.1",
+    "stylelint-config-standard": "^17.0.0",
+    "vue": "^2.4.4"
+  },
+  "optionalDependencies": {
+    "vue-hot-reload-api": "^2.2.0"
+  },
+  "pre-commit": [
+    "lint",
+    "lint:style"
+  ]
+}
